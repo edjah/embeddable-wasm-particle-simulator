@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Particle Simulator</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="favicon" href="favicon.png">
+</head>
+<body>
+  <div id="simulator">
+    <div id="sidebar">
+      <h1>Particle Simulator</h1>
+      <div id="settings">
+        <h2>Settings</h2>
+
+        <label for="simspeed">Sim Speed</label>
+        <input type="range" name="simspeed" min="0" max="5" value="1" step="0.01"/>
+
+        <label for="elasticity">Elasticity</label>
+        <input type="range" name="elasticity" min="0" max="1" value="1" step="0.01"/>
+
+        <label for="gravity">Gravity Constant</label>
+        <input type="range" name="gravity" min="0" max="5" value="1" step="0.01"/>
+
+        <label for="mass">Next Particle Mass</label>
+        <input type="range" name="mass" min="1" max="100" value="10" step="0.01"/>
+
+        <label for="traillength">Trail Length</label>
+        <input type="range" name="traillength" min="0" max="1000" value="100" step="1"/>
+
+        <label for="absorbmode">Absorb Mode</label>
+        <input type="checkbox" name="absorbmode" />
+      </div>
+
+      <div id="instructions">
+        <h2>Instructions</h2>
+        <ol>
+          <li>Left-click anywhere to create a new particle</li>
+          <li>Left-click and drag to give that particle a velocity vector</li>
+          <li>Right-click and drag to move the camera or use the arrow keys</li>
+          <li>Middle-click any particle to center the camera on it</li>
+          <li>Press C to center on the most massive particle, or to disable centering</li>
+          <li>Use the mouse wheel to zoom in out or use Z and X</li>
+          <li>Modify the sliders in the sidebar</li>
+          <li>Have fun</li>
+        </ol>
+      </div>
+      <div id="github">
+        <a href="https://github.com/edjah/WebAssembly-Particle-Simulator">
+          <img style="width: 50%; user-select: none;" src="github_img.png" />
+        </a>
+      </div>
+    </div>
+    <canvas id="canvas" oncontextmenu="return false;"></canvas>
+  </div>
+
+  <script src="build/physics_engine.js"></script>
+  <script src="simulator.js"></script>
+</body>
+</html>
