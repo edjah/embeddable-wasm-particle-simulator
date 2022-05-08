@@ -11,14 +11,6 @@ body {
     height: 100vh;
 }
 
-#sidebar {
-    text-align: center;
-    min-width: 200px;
-    width: 200px;
-    background-color: #555;
-    overflow-y: auto;
-}
-
 #instructions ol {
     padding-left: 25px;
 }

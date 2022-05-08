@@ -357,37 +357,6 @@ Module.onRuntimeInitialized = function() {
     }
   };
 
-  // set up event listeners for settings
-  document.getElementsByName('simspeed')[0].onchange = function() {
-    simSpeed = parseFloat(this.value);
-  };
-
-  document.getElementsByName('mass')[0].onchange = function() {
-    nextMass = parseFloat(this.value) * parseFloat(this.value);
-  };
-
-  document.getElementsByName('traillength')[0].onchange = function() {
-    trailLength = parseInt(this.value);
-    for (let queue of particleTrails) {
-      while (queue.size() > trailLength) {
-        queue.pop();
-      }
-      queue.maxlen = trailLength;
-    }
-  };
-
-  document.getElementsByName('elasticity')[0].onchange = function() {
-    physicsEngine.set_elasticity(parseFloat(this.value));
-  };
-
-  document.getElementsByName('gravity')[0].onchange = function() {
-    physicsEngine.set_G(200 * parseFloat(this.value));
-  };
-
-  document.getElementsByName('absorbmode')[0].onchange = function() {
-    physicsEngine.set_absorb_mode(this.checked);
-  };
-
   // set up the drawing loop
   setInterval(draw, 1000 / 60);
 };
