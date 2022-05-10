@@ -315,16 +315,16 @@ Module.onRuntimeInitialized = function() {
     canvas.onmouseleave();
   }
 
-  canvas.onwheel = function(event) {
-    let mx = event.pageX - this.offsetLeft;
-    let my = event.pageY - this.offsetTop;
+  // canvas.onwheel = function(event) {
+  //   let mx = event.pageX - this.offsetLeft;
+  //   let my = event.pageY - this.offsetTop;
 
-    if (event.deltaY > 0) {
-      zoom(scale / 1.07, mx, my);
-    } else if (event.deltaY < 0) {
-      zoom(scale * 1.07, mx, my);
-    }
-  }
+  //   if (event.deltaY > 0) {
+  //     zoom(scale / 1.07, mx, my);
+  //   } else if (event.deltaY < 0) {
+  //     zoom(scale * 1.07, mx, my);
+  //   }
+  // }
 
   // set up event listeners for keyboard inputs
   window.onkeydown = function(event) {
